@@ -39,6 +39,9 @@ services:
     environment:
       PGADMIN_DEFAULT_EMAIL: "vagner.braga@ediadefeira.com.br"
       PGADMIN_DEFAULT_PASSWORD: "postgres"
+      PG_ADMIN_DATA_DIR: /pgadmin/
+    volumes:
+        - ./pgadmin:/pgadmin/
     ports:
       - "16543:80"
     depends_on:

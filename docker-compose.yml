@@ -5,9 +5,9 @@ services:
     container_name: node_container
     image: node:13    
     volumes:
-       - ./app:/usr/src/app/       
-    working_dir: /usr/src/app/    
-    command: bash -c "npm install && npm install express && npm run dev"
+       - ./api:/usr/src/
+    working_dir: /usr/src/
+    command: bash -c "npm install && npm install express && npm run serve"
     #command: "npm run dev"
     depends_on: 
       - postgres
